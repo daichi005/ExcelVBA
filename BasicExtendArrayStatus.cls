@@ -17,7 +17,7 @@ Public Property Set setBasic(ByRef obj As basic)
 
 End Property
 
-Function dimension(ByRef arr() As Variant) As Long
+Function dimension(ByRef arr As Variant) As Long
 
     Dim result As Long
     Dim buf As Long
@@ -40,7 +40,7 @@ Function dimension(ByRef arr() As Variant) As Long
     dimension = result - 1
     
 End Function
-Function IsReleased(ByRef arr() As Variant) As Boolean
+Function IsReleased(ByRef arr() As String) As Boolean
 
     IsReleased = (arr Is Nothing)
 
