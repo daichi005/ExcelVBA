@@ -7,10 +7,14 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = True
+'参照設定：Microsoft ActiveX Data Objects 6.1 Library
+'参照設定：Microsoft Scripting Runtime
+'参照設定：Windows Script Host Object Model
+
 Option Explicit
 
 Public wsh As WshShell
-Public getPath As basicGetPath
+Public getData As BasicGetData
 Public openFileDialog As BasicOpenFileDialog
 Public exArray As BasicExtendArray
 
@@ -18,9 +22,9 @@ Private Sub Class_Initialize()
 
     Set wsh = New WshShell
 
-    Set getPath = New basicGetPath
-    Set getPath.setBasic = Me
-    Set getPath.setWsh = wsh
+    Set getData = New BasicGetData
+    Set getData.setBasic = Me
+    Set getData.setWsh = wsh
     
     Set openFileDialog = New BasicOpenFileDialog
     Set openFileDialog.setBasic = Me
