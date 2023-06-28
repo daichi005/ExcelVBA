@@ -29,5 +29,13 @@ Public Property Set setBasic(ByRef obj As basic)
     Set convert.setBasic = obj
 
 End Property
+Public Sub writeToSheet(ByRef arr() As String, ByRef ws As Worksheet, Optional ByVal start_cell As String = "A1")
+
+    ws.Range(start_cell).Range(basic.exArray.convert.toRangeKey(arr)).Value = arr
+
+End Sub
+Public Sub writeToSheetCastOption(ByRef arr() As String, ByRef cast() As String, ByRef ws As Worksheet, Optional ByVal start_cell As String = "A1")
 
 
+
+End Sub
